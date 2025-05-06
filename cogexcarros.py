@@ -16,7 +16,7 @@ st.caption(f"Última atualização: {datetime.now().strftime('%d/%m/%Y %H:%M:%S'
 # ================== FUNÇÃO PARA CARREGAR DADOS ==================
 @st.cache_data(ttl=3600)
 def carregar_dados():
-    sheet_id = "1uKsmcO4AO2Q1VzzsYHIeAT_5QNrA7hFcX5zCWwgG_FI"
+    sheet_id = "1ic4taTU8RuNlzACwz0c4D8u8cFMUIZpF1ziLh7ART3c"
     base_url = f"https://docs.google.com/spreadsheets/d/{sheet_id}/gviz/tq?tqx=out:csv&sheet="
     
     sheets_urls = {
@@ -30,7 +30,6 @@ def carregar_dados():
         df.columns = df.columns.str.strip().str.upper()
         sheets[sheet] = df
     return sheets
-
 sheets = carregar_dados()
 
 # ================== FUNÇÃO PARA CARREGAR DADOS ==================
